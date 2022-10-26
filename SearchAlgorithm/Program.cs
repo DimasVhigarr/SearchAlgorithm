@@ -77,6 +77,35 @@ namespace SearchAlgorithm
                 ch = char.Parse(Console.ReadLine().ToUpper());
             } while ((ch == 'y'));
         }
+        public void LinearSearch()
+        {
+            char ch;
+            // search for number of comparison
+            int ctr;
+            do
+            {
+                //Accept the number to be searched
+                Console.WriteLine("\nEnter the element you want to search :");
+                int item = Convert.ToInt32(Console.ReadLine());
+
+                ctr = 0;
+                for (i = 0; i < n; i++)
+                {
+                    ctr++;
+                    if (arr[i] == item)
+                    {
+                        Console.WriteLine
+                            ("\n" + item.ToString() + " found st position " + (i + 1).ToString());
+                        break;
+                    }
+                }
+                if (i == n)
+                    Console.WriteLine("\n" + item.ToString() + "not found in the array");
+                Console.WriteLine("\n Number of comparison ; " + ctr);
+                Console.Write("\nContinue search (y/n):");
+                ch = Char.Parse(Console.ReadLine().ToUpper());
+            } while ((ch == 'y'));
+        }
         static void Main(string[] args)
         {
         }
