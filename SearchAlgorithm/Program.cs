@@ -103,7 +103,7 @@ namespace SearchAlgorithm
                     Console.WriteLine("\n" + item.ToString() + "not found in the array");
                 Console.WriteLine("\n Number of comparison ; " + ctr);
                 Console.Write("\nContinue search (y/n):");
-                ch = Char.Parse(Console.ReadLine().ToUpper());
+                ch = char.Parse(Console.ReadLine().ToUpper());
             } while ((ch == 'y'));
         }
         static void Main(string[] args)
